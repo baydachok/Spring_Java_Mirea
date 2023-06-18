@@ -22,7 +22,7 @@ public class GameAuthor {
     private String nickname;
     @Basic
     @Column(name = "birth_date")
-    private Date birthDate;
+    private String birthDate;
 
     @OneToMany(mappedBy = "gameAuthor", fetch = FetchType.LAZY)
     @JsonIgnore

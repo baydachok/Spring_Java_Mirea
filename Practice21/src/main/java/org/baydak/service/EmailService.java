@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class EmailService {
     private final String FROM_EMAIL = "spring-test-email@yandex.ru";
-    private final String TO_EMAIL = "soneech@yandex.ru";
+    private final String TO_EMAIL = "Fluman123@yandex.ru";
     private final String SUBJECT = "Saving new object. Spring practice";
     private JavaMailSender mailSender;
 

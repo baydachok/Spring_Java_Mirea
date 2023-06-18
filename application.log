@@ -1,318 +1,558 @@
-1004 [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 16084 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-1012 [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-1078 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-1078 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1595 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1640 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
-1642 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1646 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'authorRepository' defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19] for bean 'authorRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr18] bound.
-1653 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+724  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 4348 (C:\Users\User\Desktop\MySpringMaven\Practice19\target\classes started by User in C:\Users\User\Desktop\MySpringMaven)
+733  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
+779  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+779  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+1224 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1269 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2116 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+2125 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2125 [restartedMain] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2126 [restartedMain] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.5]
+2176 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2176 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1396 ms
+2288 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+3454 [restartedMain] ERROR com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:253)
+	at org.postgresql.Driver.makeConnection(Driver.java:434)
+	at org.postgresql.Driver.connect(Driver.java:291)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:168)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:129)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:118)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:87)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:80)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:130)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:131)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at org.baydak.SpringBootAppPr19.main(SpringBootAppPr19.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+3485 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+3526 [restartedMain] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.1.7.Final
+3853 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+4916 [restartedMain] ERROR com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:253)
+	at org.postgresql.Driver.makeConnection(Driver.java:434)
+	at org.postgresql.Driver.connect(Driver.java:291)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at org.baydak.SpringBootAppPr19.main(SpringBootAppPr19.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+4920 [restartedMain] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator – HHH000342: Could not obtain connection to query metadata
+org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:253)
+	at org.postgresql.Driver.makeConnection(Driver.java:434)
+	at org.postgresql.Driver.connect(Driver.java:291)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at org.baydak.SpringBootAppPr19.main(SpringBootAppPr19.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+4932 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean – Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+4934 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+4945 [restartedMain] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+4964 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-1675 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'authorRepository', defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19, could not be registered. A bean with that name has already been defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr18 and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-822  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 18360 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-825  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-881  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-882  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1279 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1319 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
-1320 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1324 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'authorRepository' defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19] for bean 'authorRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr18] bound.
-1332 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-1350 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'authorRepository', defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19, could not be registered. A bean with that name has already been defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr18 and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-806  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 2432 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-810  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-873  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-873  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1276 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1314 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
-1315 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1320 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'gameRepository' defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19] for bean 'gameRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18] bound.
-1327 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-1345 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'gameRepository', defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19, could not be registered. A bean with that name has already been defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18 and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-930  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 2576 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-934  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-987  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-987  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1402 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1447 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
-1449 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1453 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'gameRepository' defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19] for bean 'gameRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18] bound.
-1461 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-1480 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'gameRepository', defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19, could not be registered. A bean with that name has already been defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18 and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-779  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 19136 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-781  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-835  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-836  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1215 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1255 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
-1256 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1260 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'gameRepository' defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19] for bean 'gameRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18] bound.
-1269 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-1285 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'gameRepository', defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19, could not be registered. A bean with that name has already been defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18 and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-805  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 1524 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-807  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-853  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-853  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1264 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1304 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
-1305 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1309 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'gameRepositoryPr19' defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19] for bean 'gameRepositoryPr19' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18] bound.
-1317 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-1334 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'gameRepositoryPr19', defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19, could not be registered. A bean with that name has already been defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18 and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-892  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 19308 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-895  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-948  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-948  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1379 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1423 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
-1424 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1428 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'authorRepository' defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19] for bean 'authorRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr18] bound.
-1435 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-1453 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'authorRepository', defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19, could not be registered. A bean with that name has already been defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr18 and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-775  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 15424 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-779  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-829  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-830  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1227 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1268 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
-1269 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1273 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'gameRepository' defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19] for bean 'gameRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18] bound.
-1280 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-1297 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'gameRepository', defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19, could not be registered. A bean with that name has already been defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18 and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-771  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 8660 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-773  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-823  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-823  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1211 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1252 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
-1253 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1257 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'gameRepository' defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19] for bean 'gameRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18] bound.
-1265 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-1282 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'gameRepository', defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19, could not be registered. A bean with that name has already been defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18 and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-826  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 18904 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-829  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-882  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-883  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1286 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1325 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
-1326 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1330 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'gameRepository' defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19] for bean 'gameRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18] bound.
-1338 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-1355 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'gameRepository', defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr19, could not be registered. A bean with that name has already been defined in org.baydak.repository.GameRepository defined in @EnableJpaRepositories declared on ConfigurationPr18 and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-801  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 16368 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-803  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-861  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-862  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1277 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1319 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
-1320 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1324 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'authorRepository' defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19] for bean 'authorRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr18] bound.
-1333 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-1350 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'authorRepository', defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr19, could not be registered. A bean with that name has already been defined in org.baydak.repository.AuthorRepository defined in @EnableJpaRepositories declared on ConfigurationPr18 and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-852  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 14456 (D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term\Practice19\target\classes started by Soneech in D:\Programming\JAVA_PROJECTS\MireaJavaPractice4Term)
-856  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
-911  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-911  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-1294 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1336 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
-1337 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1341 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
-1945 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
-1953 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-1954 [restartedMain] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-1954 [restartedMain] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.5]
-1998 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-1998 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1086 ms
-2099 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-2249 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6ac2d181
-2251 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-2286 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-2321 [restartedMain] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.1.7.Final
-2590 [restartedMain] INFO  SQL dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-3225 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-3232 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-3471 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-3581 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping – Adding welcome page template: index
-3755 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer – LiveReload server is running on port 35729
-3775 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-3796 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
-3804 [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Started SpringBootAppPr19 in 3.389 seconds (process running for 4.345)
-17972 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
-17972 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
-17973 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 0 ms
-19584 [http-nio-8080-exec-3] INFO  org.baydak.service.AuthorService – Find all authors
-560237 [http-nio-8080-exec-8] INFO  org.baydak.service.GameService – Find all games
-561307 [http-nio-8080-exec-9] INFO  org.baydak.service.GameService – Getting game by id
-565313 [http-nio-8080-exec-10] INFO  org.baydak.service.AuthorService – Getting author by id
-568411 [http-nio-8080-exec-2] INFO  org.baydak.service.AuthorService – Getting author by id
-571678 [http-nio-8080-exec-1] INFO  org.baydak.service.AuthorService – Updating author with data from update form
-571678 [http-nio-8080-exec-1] INFO  org.baydak.service.AuthorService – Getting author by id
-571680 [http-nio-8080-exec-1] INFO  org.baydak.service.AuthorService – Adding author to DB with data from form
-571712 [http-nio-8080-exec-3] INFO  org.baydak.service.AuthorService – Find all authors
-697858 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-697861 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-697863 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+4987 [restartedMain] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at org.baydak.SpringBootAppPr19.main(SpringBootAppPr19.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+	... 19 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:147)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:60)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	... 34 common frames omitted
+788  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 1292 (C:\Users\User\Desktop\MySpringMaven\Practice19\target\classes started by User in C:\Users\User\Desktop\MySpringMaven)
+790  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
+831  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+831  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+1368 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1416 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2146 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+2154 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2155 [restartedMain] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2155 [restartedMain] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.5]
+2204 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2204 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1373 ms
+2314 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+2486 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@63a746d9
+2488 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+2527 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2571 [restartedMain] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.1.7.Final
+2870 [restartedMain] INFO  SQL dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+3532 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+3543 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3789 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3915 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping – Adding welcome page template: index
+4085 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer – LiveReload server is running on port 35729
+4098 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+4113 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+4120 [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Started SpringBootAppPr19 in 3.758 seconds (process running for 4.762)
+12278 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+12279 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+12281 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 2 ms
+14412 [http-nio-8080-exec-2] INFO  org.baydak.service.AuthorService – Find all authors
+14531 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] – Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.orm.jpa.JpaSystemException: Unable to extract JDBC value for position `2`] with root cause
+java.lang.NumberFormatException: Trailing junk on timestamp: 'fghfg'
+	at org.postgresql.jdbc.TimestampUtils.parseBackendTimestamp(TimestampUtils.java:353)
+	at org.postgresql.jdbc.TimestampUtils.toTimestamp(TimestampUtils.java:395)
+	at org.postgresql.jdbc.TimestampUtils.toDate(TimestampUtils.java:637)
+	at org.postgresql.jdbc.PgResultSet.getDate(PgResultSet.java:531)
+	at org.postgresql.jdbc.PgResultSet.getDate(PgResultSet.java:2721)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getDate(HikariProxyResultSet.java)
+	at org.hibernate.type.descriptor.jdbc.DateJdbcType$2.doExtract(DateJdbcType.java:104)
+	at org.hibernate.type.descriptor.jdbc.BasicExtractor.extract(BasicExtractor.java:44)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.readCurrentRowValues(JdbcValuesResultSetImpl.java:263)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advance(JdbcValuesResultSetImpl.java:244)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:85)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:29)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:88)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:197)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$0(ConcreteSqmSelectQueryPlan.java:113)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:335)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:276)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:571)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:363)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.list(QuerySqmImpl.java:1073)
+	at org.hibernate.query.Query.getResultList(Query.java:94)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:408)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:77)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:390)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:163)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218)
+	at jdk.proxy4/jdk.proxy4.$Proxy118.findAll(Unknown Source)
+	at org.baydak.service.AuthorService.getAuthors(AuthorService.java:29)
+	at org.baydak.controllers.AuthorsController.authors(AuthorsController.java:24)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+16301 [http-nio-8080-exec-3] INFO  org.baydak.service.GameService – Find all games
+16306 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] – Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.orm.jpa.JpaSystemException: Unable to extract JDBC value for position `2`] with root cause
+java.lang.NumberFormatException: Expected time to be colon-separated, got ' '
+	at org.postgresql.jdbc.TimestampUtils.parseBackendTimestamp(TimestampUtils.java:266)
+	at org.postgresql.jdbc.TimestampUtils.toTimestamp(TimestampUtils.java:395)
+	at org.postgresql.jdbc.TimestampUtils.toDate(TimestampUtils.java:637)
+	at org.postgresql.jdbc.PgResultSet.getDate(PgResultSet.java:531)
+	at org.postgresql.jdbc.PgResultSet.getDate(PgResultSet.java:2721)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getDate(HikariProxyResultSet.java)
+	at org.hibernate.type.descriptor.jdbc.DateJdbcType$2.doExtract(DateJdbcType.java:104)
+	at org.hibernate.type.descriptor.jdbc.BasicExtractor.extract(BasicExtractor.java:44)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.readCurrentRowValues(JdbcValuesResultSetImpl.java:263)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advance(JdbcValuesResultSetImpl.java:244)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:85)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:29)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:88)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:197)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$0(ConcreteSqmSelectQueryPlan.java:113)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:335)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:276)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:571)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:363)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.list(QuerySqmImpl.java:1073)
+	at org.hibernate.query.Query.getResultList(Query.java:94)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:408)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:77)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:390)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:163)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218)
+	at jdk.proxy4/jdk.proxy4.$Proxy121.findAll(Unknown Source)
+	at org.baydak.service.GameService.getGames(GameService.java:26)
+	at org.baydak.controllers.GamesController.games(GamesController.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+91141 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+91144 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+91162 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+1170 [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 12984 (C:\Users\User\Desktop\MySpringMaven\Practice19\target\classes started by User in C:\Users\User\Desktop\MySpringMaven)
+1175 [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
+1244 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+1245 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+1928 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1993 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+3023 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+3034 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+3035 [restartedMain] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+3036 [restartedMain] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.5]
+3095 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+3095 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1850 ms
+3242 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+3463 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@442b4569
+3465 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+3506 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+3568 [restartedMain] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.1.7.Final
+4130 [restartedMain] INFO  SQL dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+4877 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+4887 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+5168 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+5288 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping – Adding welcome page template: index
+5491 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer – LiveReload server is running on port 35729
+5521 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+5529 [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Started SpringBootAppPr19 in 4.897 seconds (process running for 6.905)
+5545 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+5548 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+5553 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+721  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Starting SpringBootAppPr19 using Java 19.0.2 with PID 6400 (C:\Users\User\Desktop\MySpringMaven\Practice19\target\classes started by User in C:\Users\User\Desktop\MySpringMaven)
+723  [restartedMain] INFO  org.baydak.SpringBootAppPr19 – No active profile set, falling back to 1 default profile: "default"
+766  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+766  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+1195 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1243 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+1874 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+1882 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1883 [restartedMain] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1883 [restartedMain] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.5]
+1929 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1929 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1162 ms
+2041 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+2218 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@8757b13
+2219 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+2261 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2306 [restartedMain] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.1.7.Final
+2627 [restartedMain] INFO  SQL dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+3311 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+3320 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3568 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3693 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping – Adding welcome page template: index
+3851 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer – LiveReload server is running on port 35729
+3865 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+3880 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+3887 [restartedMain] INFO  org.baydak.SpringBootAppPr19 – Started SpringBootAppPr19 in 3.491 seconds (process running for 4.787)
+7858 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+7858 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+7859 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+7889 [http-nio-8080-exec-1] INFO  org.baydak.service.AuthorService – Find all authors
+9223 [http-nio-8080-exec-2] INFO  org.baydak.service.AuthorService – Getting author by id
+214325 [http-nio-8080-exec-5] INFO  org.baydak.service.AuthorService – Getting author by id
+214328 [http-nio-8080-exec-5] INFO  org.baydak.service.AuthorService – Deleting author from DB
+214370 [http-nio-8080-exec-6] INFO  org.baydak.service.AuthorService – Find all authors
+219623 [http-nio-8080-exec-8] INFO  org.baydak.service.AuthorService – Adding author to DB with data from form
+219643 [http-nio-8080-exec-9] INFO  org.baydak.service.AuthorService – Find all authors
+231026 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+231029 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+231034 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.

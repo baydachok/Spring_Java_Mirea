@@ -20,7 +20,7 @@ public class Game {
     private String name;
     @Basic
     @Column(name = "creation_date")
-    private Date creationDate;
+    private String creationDate;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id")
     private GameAuthor gameAuthor;

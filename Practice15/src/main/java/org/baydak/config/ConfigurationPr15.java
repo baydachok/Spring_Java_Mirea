@@ -24,7 +24,7 @@ public class ConfigurationPr15 {
         return new HikariDataSource(config);
     }
 
-    @Bean
+    @Bean(name="entityManagerFactory")
     public LocalSessionFactoryBean factoryBean(DataSource dataSource) {
         LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
         sessionFactoryBean.setDataSource(dataSource);
