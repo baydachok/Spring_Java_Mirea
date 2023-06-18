@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.sql.Date;
+// import java.sql.Date;
 
 @Entity
 @Table(name = "games")
@@ -20,7 +20,8 @@ public class Game {
     private String name;
     @Basic
     @Column(name = "creation_date")
-    private Date creationDate;
+    private String  creationDate;
+    // Date
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "author_id")
     private GameAuthor gameAuthor;

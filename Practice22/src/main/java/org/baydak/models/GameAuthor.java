@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.sql.Date;
+// import java.sql.Date;
 import java.util.List;
 
 @Entity
@@ -22,7 +22,8 @@ public class GameAuthor {
     private String nickname;
     @Basic
     @Column(name = "birth_date")
-    private Date birthDate;
+    private String birthDate;
+    // Date
 
     @OneToMany(mappedBy = "gameAuthor", fetch = FetchType.EAGER)
     @JsonIgnore
